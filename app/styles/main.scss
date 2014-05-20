@@ -1,0 +1,219 @@
+// bower:scss
+// endbower
+
+
+body {
+    background: #fafafa;
+    font-family: 'Inconsolata';
+    color: #333;
+}
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+    h1 {
+        margin: 0 0 40px 0;
+        font-family: 'Changa One', cursive;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+}
+
+.fight {
+    font-style: italic;
+}
+
+.button {
+    padding: 20px 20px;
+    height: 40px;
+    color: white;
+    background: #0A6484;
+    border-radius: 8px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 20px;
+ 
+    &:hover {
+        cursor: pointer;
+    }
+}
+ 
+.red {
+    color: red;
+    font-weight: bold;
+}
+ 
+.battle-menu {
+    display: none;
+ 
+    &.active {
+        display: block;
+    }
+}
+
+.fighter-info {
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 280px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.bar-container {
+    width: 250px;
+    height: 10px;
+}
+
+.power0 {
+    width: 250px;
+    height: 10px;
+    background-color: #FF1800;
+}
+
+.power1 {
+    width: 25px;
+    height: 10px;
+    background-color: #FF5900;
+}
+
+.power2 {
+    width: 50px;
+    height: 10px;
+    background-color: #FF9400;
+}
+
+.power3 {
+    width: 75px;
+    height: 10px;
+    background-color: #FFC700;
+}
+
+.power4 {
+    width: 100px;
+    height: 10px;
+    background-color: #FFD540;
+}
+
+.power5 {
+    width: 125px;
+    height: 10px;
+    background-color: #FFFA00;
+}
+
+.power6 {
+    width: 150px;
+    height: 10px;
+    background-color: #FFEF00;
+}
+
+.power7 {
+    width: 175px;
+    height: 10px;
+    background-color: #94B62D;
+}
+
+.power8 {
+    width: 200px;
+    height: 10px;
+    background-color: #4AA329;
+}
+
+.power9 {
+    width: 225px;
+    height: 10px;
+    background-color: #268E00;
+}
+
+.power10 {
+    width: 250px;
+    height: 10px;
+    background-color: #3BDA00;
+}
+
+
+.status {
+    font-family: 'Changa One', cursive;
+    padding: 10px;
+    width: 280px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.show-reset {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 10%;
+    width: 100%;
+    background: grey;
+    opacity:0.8;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    z-index: 10;
+ 
+    &.active {
+        display: block;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+ 
+.status {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

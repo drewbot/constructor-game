@@ -126,7 +126,7 @@ var randomNumber = Math.floor(Math.random() * 10 )+1;
       $('.status').html('Enemy launches a primary attack!');
     }
 
-//Store the variable to run the battle
+//Store the variable to hold fighter stats and power bars
 var fighterStats = function (){
   renderPlayerInfo(player);
   powerBar(player);
@@ -140,7 +140,7 @@ var runBattle = function(){
   randomNumber;
   //Remove the player choices
   $('.choices').remove();
-  //Add the battle menu with and attack options
+  //Add the battle menu with attack options
   $('.battle-menu').addClass('active');
   //Show fighter stats by calling on the function above
   fighterStats();
@@ -194,29 +194,39 @@ function renderEnemyInfo (enemy) {
   }
 }
 
+
+// function generatePowerColor (player) {
+//   var width = (player.power / 100) * 255;
+//   return "background: rgb(0," + player.power + ", 0); width: " + width + "%;"
+// }
+
+// function powerBar (player) {
+//   $('.player-bar').attr('style', generatePowerColor(player))
+// }
+
 //store the function to display a progress bar width based on player.power
   //an if else if statement is used to render a class with a specific width representative of current player.power
 function powerBar (player) {
   if (player.power > 90 && player.power < 150){
-      $('.player-bar').addClass('power10');
-    } else if (player.power > 80 && player.power < 90){
-      $('.player-bar').addClass('power9');
-    } else if (player.power > 70 && player.power < 80){
-      $('.player-bar').addClass('power8');
-    } else if (player.power > 60 && player.power < 70){
-      $('.player-bar').addClass('power7');
-    } else if (player.power > 50 && player.power < 60){
-      $('.player-bar').addClass('power6');
-    } else if (player.power > 40 && player.power < 50){
-      $('.player-bar').addClass('power5');
-    } else if (player.power > 30 && player.power < 40){
-      $('.player-bar').addClass('power4');
-    } else if (player.power > 20 && player.power < 30){
-      $('.player-bar').addClass('power3');
-    } else if (player.power > 10 && player.power < 20){
-      $('.player-bar').addClass('power2');
-    } else if (player.power > 5 && player.power < 10){
-      $('.player-bar').addClass('power1');
+      $('.player-bar').attr('class','player-bar').addClass('power10');
+    } else if (player.power >= 80 && player.power < 90){
+      $('.player-bar').attr('class','player-bar').addClass('power9');
+    } else if (player.power >= 70 && player.power < 80){
+      $('.player-bar').attr('class','player-bar').addClass('power8');
+    } else if (player.power >= 60 && player.power < 70){
+      $('.player-bar').attr('class','player-bar').addClass('power7');
+    } else if (player.power >= 50 && player.power < 60){
+      $('.player-bar').attr('class','player-bar').addClass('power6');
+    } else if (player.power >= 40 && player.power < 50){
+      $('.player-bar').attr('class','player-bar').addClass('power5');
+    } else if (player.power >= 30 && player.power < 40){
+      $('.player-bar').attr('class','player-bar').addClass('power4');
+    } else if (player.power >= 20 && player.power < 30){
+      $('.player-bar').attr('class','player-bar').addClass('power3');
+    } else if (player.power >= 10 && player.power < 20){
+      $('.player-bar').attr('class','player-bar').addClass('power2');
+    } else if (player.power >= 5 && player.power < 10){
+      $('.player-bar').attr('class','player-bar').addClass('power1');
     } else {
       $('.player-bar').addClass('power0');
     }
@@ -226,33 +236,33 @@ function powerBar (player) {
   //an if else if statement is used to render a class with a specific width representative of current enemy.power
 function enemyBar (enemy) {
   if (enemy.power > 90 && enemy.power < 150){
-      $('.enemy-bar').addClass('power10');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power10');
     } else if (enemy.power > 80 && enemy.power < 90){
-      $('.enemy-bar').addClass('power9');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power9');
     } else if (enemy.power > 70 && enemy.power < 80){
-      $('.enemy-bar').addClass('power8');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power8');
     } else if (enemy.power > 60 && enemy.power < 70){
-      $('.enemy-bar').addClass('power7');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power7');
     } else if (enemy.power > 50 && enemy.power < 60){
-      $('.enemy-bar').addClass('power6');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power6');
     } else if (enemy.power > 40 && enemy.power < 50){
-      $('.enemy-bar').addClass('power5');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power5');
     } else if (enemy.power > 30 && enemy.power < 40){
-      $('.enemy-bar').addClass('power4');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power4');
     } else if (enemy.power > 20 && enemy.power < 30){
-      $('.enemy-bar').addClass('power3');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power3');
     } else if (enemy.power > 10 && enemy.power < 20){
-      $('.enemy-bar').addClass('power2');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power2');
     } else if (enemy.power > 5 && enemy.power < 10){
-      $('.enemy-bar').addClass('power1');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power1');
     } else {
-      $('.enemy-bar').addClass('power0');
+      $('.enemy-bar').attr('class','enemy-bar').addClass('power0');
     }
 }
 
 //Attach a click event to each attack option
   //declare attack, fighter stats
-  //trigger and enemy attack by callin on the function below
+  //trigger an enemy attack by calling on the function below
 $('.primary').click(function(){
   player.primaryAttack(enemy);
   $('.status').html('You launch a primary attack!');
@@ -306,5 +316,21 @@ function triggerEnemyAttack () {
 $('.show-reset').click(function() {
     location.reload();
 });
+
+
+
+
+
+function addNewImage(imageDiv) {
+  $('.newImage').attr( "src", imageDiv);
+  return imageDiv
+}
+
+
+
+
+
+
+
 
 

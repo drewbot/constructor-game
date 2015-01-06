@@ -320,14 +320,20 @@ $('.show-reset').click(function() {
 
 
 
-
+//Create a function to render a new image which is passed through as the argument
 function addNewImage(imageDiv) {
   $('.newImage').attr( "src", imageDiv);
   return imageDiv
 }
 
+addNewImage( )
+//Image Path^goes here
 
 
+function RollDice(x) {
+  var randomNumber = Math.floor(Math.random() * x );
+  $('.di-face').text(randomNumber);
+}
 
 
 
